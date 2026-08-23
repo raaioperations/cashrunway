@@ -5,7 +5,7 @@
   "description": "CashRunway V1 foundation workspace",
   "type": "module",
   "scripts": {
-    "test": "node --test",
+    "test": "node --test tests/*.test.js",
     "validate": "sh scripts/validate.sh"
   }
 }

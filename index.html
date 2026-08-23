@@ -1,17 +1,22 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="CashRunway V1 foundation shell">
-    <title>CashRunway — Foundation</title>
-    <link rel="stylesheet" href="styles/main.css">
-  </head>
-  <body>
-    <main class="shell" aria-labelledby="page-title">
-      <p class="eyebrow">CashRunway V1</p>
-      <h1 id="page-title">Foundation established.</h1>
-      <p>Product implementation has not begun.</p>
-    </main>
-  </body>
-</html>
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="CashRunway — local-first cash runway planning"><meta name="theme-color" content="#1d2a22">
+  <link rel="manifest" href="manifest.webmanifest"><link rel="stylesheet" href="styles/main.css"><title>CashRunway</title>
+</head>
+<body>
+<header class="topbar"><a href="./" class="brand">CashRunway</a><span class="local-pill">Local-first</span></header>
+<main class="app" aria-labelledby="title">
+  <section class="intro"><p class="eyebrow">Cash runway planner</p><h1 id="title">See how long your cash lasts.</h1><p>Build a deterministic forecast from the money you have, expect, and spend. Your data stays in this browser.</p></section>
+  <div id="status" class="status" role="status" aria-live="polite">Loading your local plan…</div>
+  <section class="card assumptions" aria-labelledby="assumptions-title"><div class="section-heading"><div><h2 id="assumptions-title">Plan assumptions</h2><p>Set the horizon and cash available at the start.</p></div><div id="periods" class="button-row"><button type="button" data-months="3">3 months</button><button type="button" data-months="6">6 months</button><button type="button" data-months="12">12 months</button></div></div><div class="form-grid"><label>Starting cash <input id="startingCash" inputmode="decimal" type="number" min="0" step="0.01"></label><label>Safety threshold <input id="safetyThreshold" inputmode="decimal" type="number" min="0" step="0.01"></label><label>Forecast start <input id="forecastStart" type="date"></label><label>Forecast end <input id="forecastEnd" type="date"></label></div></section>
+  <section class="card" aria-labelledby="events-title"><div class="section-heading"><div><h2 id="events-title">Cash-flow entries</h2><p>Amounts are positive; direction determines whether cash rises or falls.</p></div><div class="button-row"><button id="exportEntries" type="button">Export entries</button><label class="button file-button">Import entries<input id="importFile" type="file" accept=".csv,text/csv" hidden></label></div></div><form id="eventForm" class="form-grid event-form"><label>Name <input id="eventName" required placeholder="Client revenue"></label><label>Direction <select id="eventDirection"><option value="in">Money in</option><option value="out">Money out</option></select></label><label>Amount <input id="eventAmount" required inputmode="decimal" type="number" min="0.01" step="0.01" placeholder="0.00"></label><label>Type <select id="eventKind"><option value="oneTime">One-time</option><option value="recurring">Recurring</option></select></label><div id="oneTimeFields"><label>Date <input id="eventDate" type="date"></label></div><div id="recurringFields" hidden><label>Frequency <select id="frequency"><option value="weekly">Weekly</option><option value="biweekly">Biweekly</option><option value="monthly">Monthly</option></select></label><label>Start date <input id="eventStartDate" type="date"></label><label>End date <input id="eventEndDate" type="date"></label></div><button class="primary" type="submit">Add entry</button></form><ul id="eventList" class="event-list"></ul></section>
+  <section class="card" aria-labelledby="scenario-title"><div class="section-heading"><div><h2 id="scenario-title">Scenarios</h2><p>Alternatives are independent snapshots for what-if planning.</p></div><div class="button-row"><select id="scenarioSelect" aria-label="Active scenario"></select><button id="duplicateScenario" type="button">Duplicate</button><button id="deleteScenario" type="button">Delete</button></div></div></section>
+  <section aria-labelledby="metrics-title"><div class="section-heading"><div><p class="eyebrow">Forecast result</p><h2 id="metrics-title">Your runway</h2></div><button id="exportForecast" type="button">Export forecast</button></div><dl id="metrics" class="metrics"></dl></section>
+  <section class="card" aria-labelledby="chart-heading"><h2 id="chart-heading">Projected cash balance over time</h2><div id="chart" class="chart"></div></section>
+  <section class="card" aria-labelledby="timeline-heading"><div class="section-heading"><div><h2 id="timeline-heading">Cash-flow timeline</h2><p>Every date is calculated in calendar-day order.</p></div></div><div class="table-wrap"><table id="forecastTable"><thead><tr><th>Date</th><th>Money in</th><th>Money out</th><th>Closing cash</th></tr></thead><tbody></tbody></table></div></section>
+  <section class="card portability" aria-labelledby="portability-heading"><div><h2 id="portability-heading">Your data</h2><p>Your CashRunway data is stored in this browser. Clearing browser/site data may remove it. Use Backup to preserve a copy.</p><p>Backup or restore the complete local plan as JSON.</p></div><div class="button-row"><button id="backup" type="button">Download backup</button><label class="button file-button">Restore backup<input id="restoreFile" type="file" accept=".json,application/json" hidden></label></div></section>
+  <footer><p>CashRunway creates projections from information you enter. Forecasts are estimates and actual results may differ. CashRunway does not provide accounting, tax, legal, investment, or financial advice.</p></footer>
+</main><script type="module" src="src/app.js"></script><script>if ('serviceWorker' in navigator) navigator.serviceWorker.register('./service-worker.js');</script>
+</body></html>

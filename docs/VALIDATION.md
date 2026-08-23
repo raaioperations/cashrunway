@@ -12,4 +12,4 @@ WAIVED BY USER FOR CASHRUNWAY V1
 Automated purposeful demonstration remains mandatory.
 Runtime proof remains mandatory.
 
-The current shell is not runtime proof of the product and does not claim product behavior.
+Local domain and static checks are currently passing. Browser runtime proof, automated purposeful demonstration, production validation, GitHub Pages, and RAAI Operations validation remain open gates.
