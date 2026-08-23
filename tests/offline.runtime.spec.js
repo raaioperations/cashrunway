@@ -20,7 +20,7 @@ async function addEvent(page, { name, direction, kind, frequency, amount, date, 
 }
 
 test('CR-OFFLINE-001 preserves the controlled CashRunway workflow offline', async ({ page, context }) => {
-  await page.goto('/');
+  await page.goto('./');
   await page.evaluate(async () => { await navigator.serviceWorker.ready; });
   if (!(await page.evaluate(() => Boolean(navigator.serviceWorker.controller)))) {
     await page.reload();

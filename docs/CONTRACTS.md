@@ -19,4 +19,4 @@ Contract statuses reflect local implementation evidence only. Browser, productio
 | CR-OFFLINE-001 | Offline operation | Cached application core | Direct Playwright Edge runtime test | PASS — local runtime |
 | CR-A11Y-001 | Accessibility | Semantic, textual financial output | Source review; browser audit pending | IMPLEMENTED — audit pending |
 | CR-FEEDBACK-001 | Feedback behavior | Visible save/error/import feedback | Browser proof pending | IMPLEMENTED — browser proof pending |
-| CR-RELEASE-001 | Release gates | All technical/publication gates | Release checklist | NOT YET SATISFIED |
+| CR-RELEASE-001 | Release gates | All technical/publication gates | Release checklist | PASS — release gates verified |

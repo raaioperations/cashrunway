@@ -4,7 +4,7 @@ CashRunway is a local-first personal cash runway planner intended to help people
 
 ## Lifecycle
 
-This repository is at the **V1 implementation / local validation** stage on `codex/cashrunway-v1`. The deterministic forecast engine, local planner shell, persistence boundary, scenario snapshots, portability flows, and offline assets are implemented. Publication and production validation are not complete.
+This repository is at the **V1 release candidate** stage. The deterministic forecast engine, local planner shell, persistence boundary, scenario snapshots, portability flows, and offline assets are implemented and validated locally and in production. The final `v1.0.0` lock is recorded only after the protected release tag is created.
 
 Run the canonical checks with:
 
