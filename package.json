@@ -6,6 +6,10 @@
   "type": "module",
   "scripts": {
     "test": "node --test tests/*.test.js",
-    "validate": "sh scripts/validate.sh"
+    "validate": "sh scripts/validate.sh",
+    "test:offline": "playwright test tests/offline.runtime.spec.js --config=playwright.config.js"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.62.1"
   }
 }

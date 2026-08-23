@@ -16,7 +16,7 @@ Contract statuses reflect local implementation evidence only. Browser, productio
 | CR-PERSIST-001 | Local persistence | IndexedDB state replacement | Browser proof pending | IMPLEMENTED — browser proof pending |
 | CR-IMPORT-001 | Import handling | Exact schema, parse-before-write | Unit tests; browser proof pending | PASS — local / browser proof pending |
 | CR-BACKUP-001 | Backup and restore | Versioned JSON state | Browser proof pending | IMPLEMENTED — browser proof pending |
-| CR-OFFLINE-001 | Offline operation | Cached application core | Browser proof pending | IMPLEMENTED — browser proof pending |
+| CR-OFFLINE-001 | Offline operation | Cached application core | Direct Playwright Edge runtime test | PASS — local runtime |
 | CR-A11Y-001 | Accessibility | Semantic, textual financial output | Source review; browser audit pending | IMPLEMENTED — audit pending |
 | CR-FEEDBACK-001 | Feedback behavior | Visible save/error/import feedback | Browser proof pending | IMPLEMENTED — browser proof pending |
 | CR-RELEASE-001 | Release gates | All technical/publication gates | Release checklist | NOT YET SATISFIED |
